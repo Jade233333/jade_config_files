@@ -101,7 +101,7 @@ call plug#end()
 " MAPPINGS --------------------------------------------------------------- {{{
 
 " Set the backslash as the leader key.
-let mapleader = '\'  
+let mapleader = '\'
 
 " Press \\ to jump back to the last cursor position.
 nnoremap <leader>\ ``
@@ -136,7 +136,7 @@ nnoremap Y y$
 " <CR> (carriage return) is like pressing the enter key.
 " !clear runs the external clear screen command.
 " !python3 % executes the current file with Python.
-nnoremap <f5> :w <CR>:!clear <CR>:!python3 % <CR>
+nnoremap <c-r> :w <CR>:!clear <CR>:!python3 % <CR>
 
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
@@ -154,7 +154,7 @@ noremap <c-right> <c-w><
 
 " NERDTree specific mappings.
 " Map the F3 key to toggle NERDTree open and close.
-nnoremap <F3> :NERDTreeToggle<cr>
+nnoremap <c-n> :NERDTreeToggle<cr>
 
 " Have nerdtree ignore certain files and directories.
 let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
