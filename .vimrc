@@ -90,6 +90,8 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 call plug#begin('~/.vim/plugged')
 
+  plug 'christoomey/vim-tmux-navigator'
+
   Plug 'dense-analysis/ale'
 
   Plug 'preservim/nerdtree'
