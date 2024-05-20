@@ -5,7 +5,7 @@ local capabilities = config.capabilities
 
 local lspconfig    = require("lspconfig")
 
-lspconfig.pyright.setup({
+lspconfig.pylsp.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "python" },

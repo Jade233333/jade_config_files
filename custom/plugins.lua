@@ -1,10 +1,6 @@
 local plugins = {
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    ft = { "python" },
-    opts = function()
-      return require "custom.configs.null-ls"
-    end,
+    "mfussenegger/nvim-jdtls"
   },
   {
     "christoomey/vim-tmux-navigator",
@@ -27,10 +23,7 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "pyright",
-        "black",
-        "mypy",
-        "ruff",
+        "python-lsp-server",
       },
     },
   },
