@@ -24,6 +24,7 @@ local plugins = {
     opts = {
       ensure_installed = {
         "python-lsp-server",
+        "clangd",
       },
     },
   },
