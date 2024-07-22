@@ -112,26 +112,30 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 alias bathelp='bat --plain --language=cmd-help'
 help() (
     set -o pipefail
     "$@" --help 2>&1 | bathelp
 )
 alias ls='lsd'
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+alias nfzf='nvim $(fzf -m --preview="bat --color=always {}")'
+source <(fzf --zsh)
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export LANG=en_US.UTF-8
+export BAT_THEME="ansi"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
 fi
-export LANG=en_US.UTF-8
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export BAT_THEME="ansi"
 
-alias nfzf='nvim $(fzf -m --preview="bat --color=always {}")'
 
